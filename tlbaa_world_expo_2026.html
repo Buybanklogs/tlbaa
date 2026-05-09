@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TLBAA World Expo 2026</title>
+  <meta property="og:site_name" content="TLBAA" />
+  <meta property="og:title" content="TLBAA World Expo 2026" />
+  <meta property="og:image" content="/tlbaa-card-bg.PNG" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style>
+    :root {
+      --bg:#f3ece1;
+      --bg-2:#e6dccb;
+      --navy:#16345f;
+      --teal:#1ca7a2;
+      --teal-2:#0f8f8a;
+      --brown:#7d4b23;
+      --sand:#f8f3ea;
+      --line:rgba(22,52,95,.16);
+      --shadow:0 18px 48px rgba(0,0,0,.12);
+      --shadow-soft:0 8px 24px rgba(22,52,95,.08);
+      --text:#1c2d45;
+      --muted:#67758a;
+    }
+
+    * { box-sizing:border-box; }
+    html, body { margin:0; padding:0; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(28,167,162,.12), transparent 34%),
+        linear-gradient(180deg, #f7f2ea 0%, #efe4d4 52%, #f8f6f1 100%);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    .site-header {
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:#fff;
+      border-bottom:1px solid rgba(22,52,95,.12);
+      box-shadow:0 6px 18px rgba(0,0,0,.06);
+    }
+    .site-header-inner {
+      width:min(1100px, calc(100% - 18px));
+      margin:0 auto;
+      padding:8px 0;
+    }
+    .site-brand {
+      display:block;
+      text-decoration:none;
+    }
+    .site-brand img {
+      width:100%;
+      height:clamp(74px, 8vw, 98px);
+      object-fit:contain;
+      object-position:center;
+      display:block;
+      background:#fff;
+      padding:4px 8px;
+    }
+
+    .page-wrap {
+      width:min(1100px, calc(100% - 18px));
+      margin:0 auto;
+      padding:16px 0 56px;
+    }
+
+    .hero {
+      position:relative;
+      border-radius:28px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.5);
+      box-shadow:var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(17,37,66,.75), rgba(17,37,66,.22)),
+        url('/tlbaa-card-bg.PNG') center center / cover no-repeat;
+      min-height:360px;
+    }
+    .hero::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at top right, rgba(28,167,162,.18), transparent 24%),
+        linear-gradient(135deg, rgba(255,255,255,.10), transparent 35%);
+    }
+    .hero-inner {
+      position:relative;
+      z-index:1;
+      padding:28px;
+      display:grid;
+      gap:18px;
+    }
+    .badge {
+      display:inline-flex;
+      width:max-content;
+      max-width:100%;
+      align-items:center;
+      gap:8px;
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.28);
+      background:rgba(255,255,255,.10);
+      color:#fff8ef;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      backdrop-filter:blur(6px);
+    }
+    .hero h1 {
+      margin:0;
+      color:#fffdf6;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size:clamp(34px, 5.5vw, 60px);
+      line-height:1.03;
+      max-width:820px;
+      text-shadow:0 4px 14px rgba(0,0,0,.25);
+    }
+    .hero p {
+      margin:0;
+      max-width:860px;
+      color:#eef5ff;
+      font-size:17px;
+      line-height:1.75;
+      text-shadow:0 2px 10px rgba(0,0,0,.2);
+    }
+    .event-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;
+      margin-top:8px;
+      max-width:900px;
+    }
+    .event-chip {
+      padding:14px 16px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(255,255,255,.09);
+      backdrop-filter:blur(8px);
+      color:#fff;
+      box-shadow:0 6px 18px rgba(0,0,0,.09);
+    }
+    .event-chip small {
+      display:block;
+      color:#d4f4f2;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:11px;
+      font-weight:800;
+      margin-bottom:6px;
+    }
+    .event-chip strong {
+      display:block;
+      color:#fff;
+      font-size:15px;
+      line-height:1.45;
+    }
+
+    .card-shell {
+      margin-top:18px;
+      padding:14px;
+      border-radius:30px;
+      background:linear-gradient(135deg, rgba(22,52,95,.08), rgba(28,167,162,.05));
+      border:1px solid rgba(22,52,95,.10);
+      box-shadow:var(--shadow-soft);
+    }
+    .portal-card {
+      background:#fff;
+      border-radius:26px;
+      overflow:hidden;
+      border:1px solid rgba(22,52,95,.12);
+      box-shadow:var(--shadow-soft);
+    }
+    .card-top {
+      padding:24px 22px 20px;
+      background:linear-gradient(135deg, #17345e 0%, #23507e 70%, #17345e 100%);
+      color:#fff;
+      position:relative;
+    }
+    .card-top::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at top right, rgba(28,167,162,.16), transparent 24%);
+      pointer-events:none;
+    }
+    .top-badges {
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      position:relative;
+      z-index:1;
+      margin-bottom:14px;
+    }
+    .pill {
+      display:inline-flex;
+      align-items:center;
+      min-height:36px;
+      padding:0 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.20);
+      background:rgba(255,255,255,.08);
+      color:#f5f8ff;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+    .card-title {
+      position:relative;
+      z-index:1;
+      margin:0;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size:clamp(28px, 4vw, 44px);
+      line-height:1.08;
+      max-width:850px;
+    }
+    .card-sub {
+      position:relative;
+      z-index:1;
+      margin:12px 0 0;
+      max-width:900px;
+      color:#e6eef8;
+      line-height:1.75;
+      font-size:15px;
+    }
+
+    .steps {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:16px;
+      position:relative;
+      z-index:1;
+    }
+    .step {
+      min-height:36px;
+      padding:0 12px;
+      display:inline-flex;
+      align-items:center;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.08);
+      color:#edf3ff;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .card-body { padding:22px; }
+
+    .screen { display:none; }
+    .screen.active { display:block; }
+
+    .section-title {
+      margin:0 0 8px;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size:28px;
+      line-height:1.12;
+      color:#17345e;
+    }
+    .section-copy {
+      margin:0;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:15px;
+    }
+
+    .overview {
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:16px;
+      align-items:stretch;
+      margin-top:18px;
+    }
+    .overview-box {
+      border-radius:22px;
+      padding:18px;
+      border:1px solid rgba(22,52,95,.14);
+      background:linear-gradient(180deg, #fffdf8 0%, #fff 100%);
+      box-shadow:0 10px 24px rgba(22,52,95,.05);
+    }
+    .overview-badge {
+      font-size:11px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--brown);
+      font-weight:900;
+      margin-bottom:8px;
+    }
+    .overview-price {
+      font-size:40px;
+      font-weight:900;
+      line-height:1;
+      color:#17345e;
+      margin:0;
+    }
+    .overview-list {
+      margin:14px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+    .overview-list li {
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid rgba(28,167,162,.18);
+      background:rgba(28,167,162,.05);
+      color:#214264;
+      line-height:1.55;
+    }
+    .overview-list .dot {
+      width:20px;
+      height:20px;
+      min-width:20px;
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:12px;
+      font-weight:900;
+      background:linear-gradient(180deg, #1ca7a2, #0f8f8a);
+      box-shadow:0 4px 10px rgba(28,167,162,.22);
+      margin-top:1px;
+    }
+
+    .feature-card {
+      border-radius:22px;
+      overflow:hidden;
+      min-height:100%;
+      border:1px solid rgba(22,52,95,.14);
+      background:
+        linear-gradient(180deg, rgba(14,28,49,.32), rgba(14,28,49,.08)),
+        url('/tlbaa-card-bg.PNG') center center / cover no-repeat;
+      position:relative;
+      box-shadow:0 10px 24px rgba(22,52,95,.05);
+    }
+    .feature-card::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.05));
+    }
+    .feature-card-inner {
+      position:relative;
+      z-index:1;
+      padding:18px;
+      color:#fff;
+      min-height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:18px;
+    }
+    .feature-card h3 {
+      margin:0;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size:22px;
+      line-height:1.15;
+      text-shadow:0 2px 10px rgba(0,0,0,.25);
+    }
+    .feature-card p {
+      margin:0;
+      color:#eef5fb;
+      line-height:1.7;
+      font-size:14px;
+      text-shadow:0 2px 8px rgba(0,0,0,.24);
+    }
+
+    .package-grid {
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+    .package-card {
+      border-radius:20px;
+      padding:16px;
+      border:1px solid rgba(22,52,95,.12);
+      background:linear-gradient(180deg, #ffffff 0%, #fffdf9 100%);
+      box-shadow:0 8px 20px rgba(22,52,95,.05);
+    }
+    .package-head {
+      display:flex;
+      gap:14px;
+      justify-content:space-between;
+      align-items:flex-start;
+      margin-bottom:8px;
+    }
+    .package-title {
+      font-size:16px;
+      font-weight:900;
+      color:#1c355c;
+      line-height:1.25;
+    }
+    .package-price {
+      font-size:16px;
+      font-weight:900;
+      color:#0f8f8a;
+      white-space:nowrap;
+    }
+    .package-meta {
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+      margin-bottom:12px;
+    }
+    .package-actions {
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+    .qty-input {
+      width:76px;
+      min-height:46px;
+      padding:0 10px;
+      border-radius:14px;
+      border:1px solid rgba(22,52,95,.16);
+      outline:none;
+      font-size:15px;
+      color:#1f2c3f;
+      background:#fff;
+    }
+
+    .btn {
+      appearance:none;
+      border:none;
+      cursor:pointer;
+      min-height:46px;
+      padding:0 18px;
+      border-radius:14px;
+      font-size:15px;
+      font-weight:800;
+      transition:.18s ease;
+    }
+    .btn:hover { transform:translateY(-1px); }
+    .btn-primary {
+      color:#fff;
+      background:linear-gradient(180deg, #1ca7a2, #0f8f8a);
+      box-shadow:0 8px 18px rgba(28,167,162,.18);
+    }
+    .btn-soft {
+      color:#17345e;
+      background:#eff4fb;
+      border:1px solid #d8e2ef;
+    }
+    .btn-wide { width:100%; }
+
+    .form-wrap {
+      margin-top:18px;
+      padding:18px;
+      border-radius:22px;
+      border:1px solid rgba(22,52,95,.12);
+      background:linear-gradient(180deg, #fffdf8 0%, #fff 100%);
+      box-shadow:0 8px 20px rgba(22,52,95,.04);
+    }
+    .form-grid {
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+    }
+    .field.full { grid-column:1/-1; }
+    label {
+      display:block;
+      margin:0 0 8px;
+      color:#1d375c;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.01em;
+    }
+    input, textarea {
+      width:100%;
+      min-height:52px;
+      border-radius:16px;
+      border:1px solid #d7e0ec;
+      background:#fff;
+      padding:14px 15px;
+      color:#16263b;
+      font-size:15px;
+      outline:none;
+    }
+    textarea {
+      min-height:116px;
+      resize:vertical;
+    }
+    input:focus, textarea:focus {
+      border-color:rgba(28,167,162,.8);
+      box-shadow:0 0 0 4px rgba(28,167,162,.14);
+    }
+
+    .payment-select {
+      position:relative;
+    }
+    .payment-select-trigger {
+      width:100%;
+      min-height:52px;
+      border-radius:16px;
+      padding:10px 14px;
+      border:1px solid rgba(28,167,162,.28);
+      background:linear-gradient(180deg, #fff, #f9fffe);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      cursor:pointer;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.8);
+    }
+    .payment-trigger-left {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:#17345e;
+      min-width:0;
+    }
+    .payment-trigger-placeholder { color:#6f7f93; }
+    .payment-trigger-value { font-weight:800; }
+    .payment-trigger-caret {
+      width:20px; height:20px; color:#17345e; transition:transform .2s ease;
+    }
+    .payment-select-trigger.open .payment-trigger-caret {
+      transform:rotate(180deg);
+    }
+    .payment-select-menu {
+      display:none;
+      position:absolute;
+      left:0; right:0; top:calc(100% + 8px);
+      background:#fff;
+      border:1px solid #dde6ef;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 18px 38px rgba(13,28,52,.12);
+      z-index:20;
+    }
+    .payment-select-menu.open { display:block; }
+    .payment-option {
+      width:100%;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:14px 15px;
+      border:none;
+      background:#fff;
+      border-bottom:1px solid #eef2f7;
+      color:#17345e;
+      font-size:15px;
+      font-weight:700;
+      text-align:left;
+      cursor:pointer;
+    }
+    .payment-option:last-child { border-bottom:none; }
+    .payment-option.active, .payment-option:hover { background:#f8fcfb; }
+
+    .brand-logo {
+      width:30px;
+      height:30px;
+      min-width:30px;
+      border-radius:10px;
+      overflow:hidden;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:#fff;
+      box-shadow:0 2px 8px rgba(10,20,35,.08);
+    }
+    .brand-logo.brand-lg {
+      width:38px; height:38px; min-width:38px;
+      border-radius:12px;
+    }
+    .brand-logo img {
+      width:100%; height:100%; object-fit:contain; display:block;
+    }
+    .cashapp { background:#00d632; }
+    .zelle { background:#6d1ed4; }
+    .applepay { background:#111; }
+
+    .selected-method-visual {
+      display:none;
+      align-items:center;
+      gap:12px;
+      margin-top:12px;
+      padding:14px 16px;
+      border-radius:18px;
+      border:1px solid rgba(28,167,162,.18);
+      background:linear-gradient(180deg, #fffefc, #f8fffe);
+      box-shadow:0 8px 18px rgba(22,52,95,.04);
+    }
+    .selected-method-visual.active { display:flex; }
+    .selected-method-text {
+      display:flex;
+      flex-direction:column;
+      gap:3px;
+    }
+    .selected-method-text small {
+      color:#7a8a9e;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .selected-method-text strong { color:#17345e; font-size:15px; }
+
+    .summary-box {
+      margin-top:18px;
+      padding:20px;
+      border-radius:22px;
+      border:1px solid rgba(22,52,95,.12);
+      background:linear-gradient(180deg, #fffdf8 0%, #fff 100%);
+      box-shadow:0 8px 20px rgba(22,52,95,.05);
+    }
+    .summary-row {
+      display:grid;
+      grid-template-columns:220px 1fr;
+      gap:10px 16px;
+      padding:9px 0;
+      border-bottom:1px solid rgba(22,52,95,.10);
+    }
+    .summary-row:last-child { border-bottom:none; }
+    .summary-label { color:#17345e; font-weight:900; }
+    .summary-value { color:#20324a; line-height:1.6; word-break:break-word; }
+
+    .cart-box {
+      margin-top:18px;
+      border-radius:22px;
+      border:1px solid rgba(22,52,95,.12);
+      background:linear-gradient(180deg, #fffdf8 0%, #fff 100%);
+      overflow:hidden;
+      box-shadow:0 8px 20px rgba(22,52,95,.05);
+    }
+    .cart-head {
+      padding:16px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      background:linear-gradient(135deg, #17345e 0%, #23507e 70%, #17345e 100%);
+      color:#fff;
+    }
+    .cart-head strong {
+      font-size:16px;
+      line-height:1.2;
+    }
+    .cart-total {
+      font-size:20px;
+      font-weight:900;
+      white-space:nowrap;
+    }
+    .cart-body {
+      padding:14px 16px 16px;
+    }
+    .cart-empty {
+      margin:0;
+      color:#6b7d91;
+      padding:12px 0;
+    }
+    .cart-row {
+      display:grid;
+      grid-template-columns:1fr auto auto auto;
+      gap:10px;
+      align-items:center;
+      padding:14px 0;
+      border-bottom:1px solid rgba(22,52,95,.10);
+    }
+    .cart-row:last-child { border-bottom:none; }
+    .cart-row-name {
+      font-weight:900;
+      color:#17345e;
+      line-height:1.35;
+    }
+    .cart-row-meta {
+      color:#6a7a8f;
+      font-size:13px;
+      margin-top:5px;
+    }
+    .cart-row-qty {
+      color:#17345e;
+      font-weight:800;
+      white-space:nowrap;
+    }
+    .cart-row-price {
+      color:#0f8f8a;
+      font-weight:900;
+      white-space:nowrap;
+    }
+    .remove-btn {
+      width:38px;
+      height:38px;
+      border-radius:12px;
+      border:1px solid #f0c7c7;
+      background:#fff3f3;
+      color:#ab3a3a;
+      font-size:20px;
+      line-height:1;
+      cursor:pointer;
+    }
+
+    .payment-panel {
+      display:none;
+      margin-top:18px;
+    }
+    .payment-panel.active { display:block; }
+    .payment-method-box {
+      margin-top:16px;
+      padding:18px;
+      border-radius:22px;
+      border:1px solid rgba(22,52,95,.12);
+      background:linear-gradient(180deg, #fffdf8 0%, #fff 100%);
+      box-shadow:0 8px 20px rgba(22,52,95,.04);
+    }
+    .method-heading {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:8px;
+    }
+    .method-heading h4 {
+      margin:0;
+      color:#17345e;
+      font-size:19px;
+      font-weight:900;
+    }
+    .payment-method-box p {
+      margin:0 0 12px;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:14px;
+    }
+    .meta-list {
+      display:grid;
+      gap:10px;
+      margin-top:12px;
+    }
+    .meta-item {
+      padding:13px 14px;
+      border-radius:14px;
+      border:1px dashed rgba(28,167,162,.25);
+      background:#fbfefc;
+      color:#2a4566;
+      line-height:1.6;
+      font-size:14px;
+      overflow-wrap:anywhere;
+    }
+
+    .checkbox-row {
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      margin-top:16px;
+      padding:16px;
+      border-radius:16px;
+      border:1px solid rgba(22,52,95,.12);
+      background:#f8fbff;
+    }
+    .checkbox-row input[type="checkbox"] {
+      width:18px;
+      height:18px;
+      min-height:18px;
+      accent-color:#1ca7a2;
+      margin-top:2px;
+    }
+    .checkbox-row label {
+      margin:0;
+      font-size:14px;
+      color:#214264;
+      line-height:1.65;
+      font-weight:700;
+    }
+
+    .status {
+      display:none;
+      margin-top:14px;
+      padding:14px 16px;
+      border-radius:14px;
+      font-size:14px;
+      font-weight:700;
+    }
+    .status.success {
+      display:block;
+      background:#eefaf4;
+      border:1px solid #cae5d6;
+      color:#1a6b47;
+    }
+    .status.error {
+      display:block;
+      background:#fff4f2;
+      border:1px solid #f0d0ca;
+      color:#a53a2d;
+    }
+
+    .actions {
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+
+    iframe {
+      display:none;
+      width:0;
+      height:0;
+      border:0;
+    }
+
+    .footer-note {
+      margin-top:18px;
+      color:#5f6f84;
+      font-size:12px;
+      line-height:1.7;
+    }
+
+    @media (max-width: 860px) {
+      .overview, .form-grid, .package-grid {
+        grid-template-columns:1fr;
+      }
+      .summary-row {
+        grid-template-columns:1fr;
+        gap:4px;
+      }
+      .cart-row {
+        grid-template-columns:1fr;
+        align-items:flex-start;
+      }
+      .cart-total {
+        font-size:18px;
+      }
+    }
+    @media (max-width: 700px) {
+      .site-header-inner, .page-wrap {
+        width:min(100% - 14px, 1100px);
+      }
+      .site-brand img {
+        height:72px;
+        padding:4px 6px;
+      }
+      .hero {
+        min-height:320px;
+        border-radius:24px;
+      }
+      .hero-inner {
+        padding:20px;
+      }
+      .hero p {
+        font-size:15px;
+      }
+      .event-grid {
+        grid-template-columns:1fr;
+      }
+      .card-shell {
+        padding:10px;
+        border-radius:24px;
+      }
+      .card-body {
+        padding:18px 16px;
+      }
+      .package-head {
+        gap:10px;
+      }
+      .actions, .package-actions {
+        flex-direction:column;
+        align-items:stretch;
+      }
+      .qty-input {
+        width:100%;
+      }
+      .btn {
+        width:100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="/" aria-label="TLBAA Home">
+        <img src="/tlbaa-header.PNG" alt="Texas Longhorn Breeders Association of America">
+      </a>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="badge">TLBAA World Expo 2026</div>
+        <h1>Texas Longhorn Breeders Association World Expo</h1>
+        <p>
+          A premium registration experience for exhibitors, sponsors, and TLBAA supporters joining the 2026 World Expo in Abilene.
+        </p>
+        <div class="event-grid">
+          <div class="event-chip">
+            <small>Date</small>
+            <strong>July 15–19, 2026</strong>
+          </div>
+          <div class="event-chip">
+            <small>Venue</small>
+            <strong>Taylor County Expo Center</strong>
+          </div>
+          <div class="event-chip">
+            <small>Location</small>
+            <strong>1700 TX-36, Abilene, TX 79602</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-shell">
+      <div class="portal-card">
+        <div class="card-top">
+          <div class="top-badges">
+            <span class="pill">World Expo Enrollment</span>
+            <span class="pill">Official Program Flow</span>
+          </div>
+          <h2 class="card-title">Select Your Expo Package, Register, and Confirm Payment</h2>
+          <p class="card-sub">
+            Use the registration flow to enter participant details, choose your Expo package, and submit your payment confirmation in a clear step-by-step process.
+          </p>
+          <div class="steps">
+            <span class="step">1. Event Overview</span>
+            <span class="step">2. Registration Details</span>
+            <span class="step">3. Package Selection</span>
+            <span class="step">4. Payment</span>
+            <span class="step">5. Payment Confirmation</span>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="screen active" id="screen-1">
+            <h3 class="section-title">Expo Overview</h3>
+            <p class="section-copy">
+              The 2026 TLBAA World Expo brings together exhibitors, judges, youth programs, and breeders for a week of show activity, education, and celebration.
+            </p>
+
+            <div class="overview">
+              <div class="overview-box">
+                <div class="overview-badge">Featured exhibitor space</div>
+                <p class="overview-price">$125</p>
+                <ul class="overview-list">
+                  <li><span class="dot">✓</span><span>10' × 10' vendor booth / exhibitor space</span></li>
+                  <li><span class="dot">✓</span><span>World Expo package pricing based on the TLBAA sponsor sheet</span></li>
+                  <li><span class="dot">✓</span><span>Sponsor deadline: June 1, 2026 to appear on the T-shirt</span></li>
+                </ul>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-card-inner">
+                  <div>
+                    <h3>World Expo Highlights</h3>
+                    <p>
+                      July 15–19, 2026 • Abilene, Texas. Judges, youth show events, banquets, and expo activities all come together in one showcase.
+                    </p>
+                  </div>
+                  <p>
+                    Location: Taylor County Expo Center, 1700 TX-36, Abilene, TX 79602.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button type="button" class="btn btn-primary" onclick="showScreen(2)">Join Now</button>
+            </div>
+          </div>
+
+          <div class="screen" id="screen-2">
+            <h3 class="section-title">Registration Details</h3>
+            <p class="section-copy">Please complete your details before choosing packages.</p>
+
+            <form id="registrationForm" action="https://formsubmit.co/f66137bfdfcf0f5533e779c43a8a6e6c" method="POST" target="hidden_iframe_registration">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" value="TLBAA World Expo 2026 - Registration Details">
+              <input type="hidden" name="submission_type" value="registration_details">
+              <input type="hidden" name="event_name" value="TLBAA World Expo 2026">
+              <div class="form-wrap">
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="fullName">Full Name</label>
+                    <input id="fullName" name="full_name" type="text" required>
+                  </div>
+                  <div class="field">
+                    <label for="email">Email Address</label>
+                    <input id="email" name="email" type="email" required>
+                  </div>
+                  <div class="field">
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" name="phone_number" type="tel" required>
+                  </div>
+                  <div class="field">
+                    <label for="companyName">Company Name</label>
+                    <input id="companyName" name="company_name" type="text" required>
+                  </div>
+                  <div class="field">
+                    <label for="memberType">Registration Type</label>
+                    <input id="memberType" name="registration_type" type="text" placeholder="Exhibitor / Sponsor / Guest" required>
+                  </div>
+                  <div class="field">
+                    <label for="jobTitle">Title / Role</label>
+                    <input id="jobTitle" name="title_role" type="text" placeholder="Optional">
+                  </div>
+                  <div class="field full">
+                    <label for="address">Mailing Address</label>
+                    <input id="address" name="mailing_address" type="text" required>
+                  </div>
+                  <div class="field">
+                    <label for="city">City</label>
+                    <input id="city" name="city" type="text" required>
+                  </div>
+                  <div class="field">
+                    <label for="state">State</label>
+                    <input id="state" name="state" type="text" required>
+                  </div>
+                  <div class="field">
+                    <label for="zip">ZIP Code</label>
+                    <input id="zip" name="zip_code" type="text" required>
+                  </div>
+                  <div class="field">
+                    <label for="country">Country</label>
+                    <input id="country" name="country" type="text" value="United States" required>
+                  </div>
+                  <div class="field full">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="additional_notes" placeholder="Optional note"></textarea>
+                  </div>
+                  <div class="field full">
+                    <label for="paymentMethodTrigger">Preferred Payment Method</label>
+                    <div class="payment-select" id="paymentSelect">
+                      <input type="hidden" id="paymentMethod" name="preferred_payment_method" required>
+                      <button type="button" class="payment-select-trigger" id="paymentMethodTrigger" aria-expanded="false">
+                        <span class="payment-trigger-left" id="paymentTriggerContent">
+                          <span class="payment-trigger-placeholder">Select payment method</span>
+                        </span>
+                        <svg class="payment-trigger-caret" viewBox="0 0 24 24" fill="none">
+                          <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                      <div class="payment-select-menu" id="paymentMethodMenu">
+                        <button type="button" class="payment-option" data-value="Cash App">
+                          <span class="brand-logo cashapp"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/cashapp.svg" alt="Cash App"></span>
+                          <span>Cash App</span>
+                        </button>
+                        <button type="button" class="payment-option" data-value="Zelle">
+                          <span class="brand-logo zelle"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/zelle.svg" alt="Zelle"></span>
+                          <span>Zelle</span>
+                        </button>
+                        <button type="button" class="payment-option" data-value="Apple Pay">
+                          <span class="brand-logo applepay"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/applepay.svg" alt="Apple Pay"></span>
+                          <span>Apple Pay</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div id="selectedMethodVisual" class="selected-method-visual">
+                      <span id="selectedMethodLogo"></span>
+                      <div class="selected-method-text">
+                        <small>Selected payment method</small>
+                        <strong id="selectedMethodName">—</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-note">
+                  Registration details are sent first, then you will move to the package selection screen.
+                </div>
+              </div>
+              <div id="step2Status" class="status"></div>
+              <div class="actions">
+                <button type="button" class="btn btn-soft" onclick="showScreen(1)">Back</button>
+                <button type="button" class="btn btn-primary" onclick="submitRegistration()">Continue to Packages</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="screen" id="screen-3">
+            <h3 class="section-title">Available Packages</h3>
+            <p class="section-copy">Choose one or more TLBAA World Expo packages. Add them to the cart before proceeding to payment.</p>
+
+            <div class="package-grid">
+              
+              <div class="package-card">
+                <div class="package-head">
+                  <div class="package-title">Class Sponsor</div>
+                  <div class="package-price">$50</div>
+                </div>
+                <div class="package-meta">Select quantity and add to your registration.</div>
+                <div class="package-actions">
+                  <input type="number" min="1" value="1" id="qty-class-sponsor" class="qty-input" aria-label="Class Sponsor quantity">
+                  <button type="button" class="btn btn-soft" onclick="addPackage('class-sponsor')">Add</button>
+                </div>
+              </div>
+
+
+              <div class="package-card">
+                <div class="package-head">
+                  <div class="package-title">Division Sponsor</div>
+                  <div class="package-price">$100</div>
+                </div>
+                <div class="package-meta">Select quantity and add to your registration.</div>
+                <div class="package-actions">
+                  <input type="number" min="1" value="1" id="qty-division-sponsor" class="qty-input" aria-label="Division Sponsor quantity">
+                  <button type="button" class="btn btn-soft" onclick="addPackage('division-sponsor')">Add</button>
+                </div>
+              </div>
+
+
+              <div class="package-card">
+                <div class="package-head">
+                  <div class="package-title">Overall Sponsor</div>
+                  <div class="package-price">$150</div>
+                </div>
+                <div class="package-meta">Select quantity and add to your registration.</div>
+                <div class="package-actions">
+                  <input type="number" min="1" value="1" id="qty-overall-sponsor" class="qty-input" aria-label="Overall Sponsor quantity">
+                  <button type="button" class="btn btn-soft" onclick="addPackage('overall-sponsor')">Add</button>
+                </div>
+              </div>
+
+
+              <div class="package-card">
+                <div class="package-head">
+                  <div class="package-title">Member Recruit Level</div>
+                  <div class="package-price">$200</div>
+                </div>
+                <div class="package-meta">Select quantity and add to your registration.</div>
+                <div class="package-actions">
+                  <input type="number" min="1" value="1" id="qty-member-recruit" class="qty-input" aria-label="Member Recruit Level quantity">
+                  <button type="button" class="btn btn-soft" onclick="addPackage('member-recruit')">Add</button>
+                </div>
+              </div>
+
+
+              <div class="package-card">
+                <div class="package-head">
+                  <div class="package-title">WR Trails Package</div>
+                  <div class="package-price">$200</div>
+                </div>
+                <div class="package-meta">Select quantity and add to your registration.</div>
+                <div class="package-actions">
+                  <input type="number" min="1" value="1" id="qty-wr-trails" class="qty-input" aria-label="WR Trails Package quantity">
+                  <button type="button" class="btn btn-soft" onclick="addPackage('wr-trails')">Add</button>
+                </div>
+              </div>
+
+
+              <div class="package-card">
+                <div class="package-head">
+                  <div class="package-title">Jetpack Spotlight</div>
+                  <div class="package-price">$250</div>
+                </div>
+                <div class="package-meta">Select quantity and add to your registration.</div>
+                <div class="package-actions">
+                  <input type="number" min="1" value="1" id="qty-jetpack" class="qty-input" aria-label="Jetpack Spotlight quantity">
+                  <button type="button" class="btn btn-soft" onclick="addPackage('jetpack')">Add</button>
+                </div>
+              </div>
+
+
+              <div class="package-card">
+                <div class="package-head">
+                  <div class="package-title">4K Daytona Package</div>
+                  <div class="package-price">$500</div>
+                </div>
+                <div class="package-meta">Select quantity and add to your registration.</div>
+                <div class="package-actions">
+                  <input type="number" min="1" value="1" id="qty-4k-daytona" class="qty-input" aria-label="4K Daytona Package quantity">
+                  <button type="button" class="btn btn-soft" onclick="addPackage('4k-daytona')">Add</button>
+                </div>
+              </div>
+
+
+              <div class="package-card">
+                <div class="package-head">
+                  <div class="package-title">Warp Speed Spotlight</div>
+                  <div class="package-price">$500</div>
+                </div>
+                <div class="package-meta">Select quantity and add to your registration.</div>
+                <div class="package-actions">
+                  <input type="number" min="1" value="1" id="qty-warp-speed" class="qty-input" aria-label="Warp Speed Spotlight quantity">
+                  <button type="button" class="btn btn-soft" onclick="addPackage('warp-speed')">Add</button>
+                </div>
+              </div>
+
+
+              <div class="package-card">
+                <div class="package-head">
+                  <div class="package-title">Sunrise Admiral Package</div>
+                  <div class="package-price">$750</div>
+                </div>
+                <div class="package-meta">Select quantity and add to your registration.</div>
+                <div class="package-actions">
+                  <input type="number" min="1" value="1" id="qty-sunrise-admiral" class="qty-input" aria-label="Sunrise Admiral Package quantity">
+                  <button type="button" class="btn btn-soft" onclick="addPackage('sunrise-admiral')">Add</button>
+                </div>
+              </div>
+
+
+              <div class="package-card">
+                <div class="package-head">
+                  <div class="package-title">Full Throttle Spread</div>
+                  <div class="package-price">$750</div>
+                </div>
+                <div class="package-meta">Select quantity and add to your registration.</div>
+                <div class="package-actions">
+                  <input type="number" min="1" value="1" id="qty-full-throttle" class="qty-input" aria-label="Full Throttle Spread quantity">
+                  <button type="button" class="btn btn-soft" onclick="addPackage('full-throttle')">Add</button>
+                </div>
+              </div>
+
+
+              <div class="package-card">
+                <div class="package-head">
+                  <div class="package-title">Saltgrass Package</div>
+                  <div class="package-price">$1000</div>
+                </div>
+                <div class="package-meta">Select quantity and add to your registration.</div>
+                <div class="package-actions">
+                  <input type="number" min="1" value="1" id="qty-saltgrass" class="qty-input" aria-label="Saltgrass Package quantity">
+                  <button type="button" class="btn btn-soft" onclick="addPackage('saltgrass')">Add</button>
+                </div>
+              </div>
+
+
+              <div class="package-card">
+                <div class="package-head">
+                  <div class="package-title">Jet Jockey Package</div>
+                  <div class="package-price">$1500</div>
+                </div>
+                <div class="package-meta">Select quantity and add to your registration.</div>
+                <div class="package-actions">
+                  <input type="number" min="1" value="1" id="qty-jet-jockey" class="qty-input" aria-label="Jet Jockey Package quantity">
+                  <button type="button" class="btn btn-soft" onclick="addPackage('jet-jockey')">Add</button>
+                </div>
+              </div>
+
+
+              <div class="package-card">
+                <div class="package-head">
+                  <div class="package-title">Vendor Booth 10x10</div>
+                  <div class="package-price">$125</div>
+                </div>
+                <div class="package-meta">Select quantity and add to your registration.</div>
+                <div class="package-actions">
+                  <input type="number" min="1" value="1" id="qty-vendor-booth" class="qty-input" aria-label="Vendor Booth 10x10 quantity">
+                  <button type="button" class="btn btn-soft" onclick="addPackage('vendor-booth')">Add</button>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="cart-box">
+              <div class="cart-head">
+                <strong>Added Packages</strong>
+                <div class="cart-total" id="cartTotal">$0.00</div>
+              </div>
+              <div class="cart-body" id="cartBody">
+                <p class="cart-empty">No package has been added yet.</p>
+              </div>
+            </div>
+
+            <form id="ticketsForm" action="https://formsubmit.co/f66137bfdfcf0f5533e779c43a8a6e6c" method="POST" target="hidden_iframe_tickets" style="display:none">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" value="TLBAA World Expo 2026 - Package Details">
+              <input type="hidden" name="submission_type" value="package_details">
+              <input type="hidden" name="event_name" value="TLBAA World Expo 2026">
+              <input type="hidden" name="full_name" id="tk_full_name">
+              <input type="hidden" name="email" id="tk_email">
+              <input type="hidden" name="phone_number" id="tk_phone">
+              <input type="hidden" name="company_name" id="tk_company">
+              <input type="hidden" name="registration_type" id="tk_memberType">
+              <input type="hidden" name="title_role" id="tk_jobTitle">
+              <input type="hidden" name="mailing_address" id="tk_address">
+              <input type="hidden" name="city" id="tk_city">
+              <input type="hidden" name="state" id="tk_state">
+              <input type="hidden" name="zip_code" id="tk_zip">
+              <input type="hidden" name="country" id="tk_country">
+              <input type="hidden" name="preferred_payment_method" id="tk_payment_method">
+              <input type="hidden" name="selected_packages" id="tk_selected_packages">
+              <input type="hidden" name="total_amount" id="tk_total">
+              <input type="hidden" name="additional_notes" id="tk_notes">
+            </form>
+
+            <div id="step3Status" class="status"></div>
+            <div class="actions">
+              <button type="button" class="btn btn-soft" onclick="showScreen(2)">Back</button>
+              <button type="button" class="btn btn-primary" onclick="submitTickets()">Continue to Payment</button>
+            </div>
+          </div>
+
+          <div class="screen" id="screen-4">
+            <h3 class="section-title">Payment</h3>
+            <p class="section-copy">Review your details and complete payment using your selected method.</p>
+
+            <div class="summary-box" id="paymentSummary"></div>
+
+            <div class="payment-panel" id="cashAppBox">
+              <div class="payment-method-box">
+                <div class="method-heading">
+                  <span class="brand-logo brand-lg cashapp"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/cashapp.svg" alt="Cash App"></span>
+                  <h4>Cash App</h4>
+                </div>
+                <p>Use the official TLBAA payment destination if available for this event.</p>
+                <div class="meta-list">
+                  <div class="meta-item">Cash App Tag: <strong>Replace with official TLBAA tag</strong></div>
+                  <div class="meta-item">Payment Link: <strong>Replace with official TLBAA Cash App link</strong></div>
+                  <div class="meta-item">Payment Note: <strong>TLBAA World Expo 2026</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-panel" id="zelleBox">
+              <div class="payment-method-box">
+                <div class="method-heading">
+                  <span class="brand-logo brand-lg zelle"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/zelle.svg" alt="Zelle"></span>
+                  <h4>Zelle</h4>
+                </div>
+                <p>Use the official TLBAA Zelle destination if available for this event.</p>
+                <div class="meta-list">
+                  <div class="meta-item">Recipient Name: <strong>Texas Longhorn Breeders Association of America</strong></div>
+                  <div class="meta-item">Recipient Email or Phone: <strong>Replace with official TLBAA Zelle contact</strong></div>
+                  <div class="meta-item">Payment Note: <strong>TLBAA World Expo 2026</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-panel" id="applePayBox">
+              <div class="payment-method-box">
+                <div class="method-heading">
+                  <span class="brand-logo brand-lg applepay"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/applepay.svg" alt="Apple Pay"></span>
+                  <h4>Apple Pay</h4>
+                </div>
+                <p>Use the approved Apple Pay destination if the organization has one enabled.</p>
+                <div class="meta-list">
+                  <div class="meta-item">Apple Pay Contact: <strong>Replace with official TLBAA Apple Pay contact</strong></div>
+                  <div class="meta-item">Payment Note: <strong>TLBAA World Expo 2026</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button type="button" class="btn btn-soft" onclick="showScreen(3)">Back</button>
+              <button type="button" class="btn btn-primary" onclick="goToConfirmation()">Continue to Payment Confirmation</button>
+            </div>
+          </div>
+
+          <div class="screen" id="screen-5">
+            <h3 class="section-title">Payment Confirmation</h3>
+            <p class="section-copy">Confirm that you have sent the funds. This final step sends the confirmation record to email.</p>
+
+            <div class="summary-box" id="finalSummary"></div>
+
+            <form id="paymentConfirmForm" action="https://formsubmit.co/f66137bfdfcf0f5533e779c43a8a6e6c" method="POST" target="hidden_iframe_confirmation">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" value="TLBAA World Expo 2026 - Funds Sent Confirmation">
+              <input type="hidden" name="submission_type" value="payment_confirmation">
+              <input type="hidden" name="event_name" value="TLBAA World Expo 2026">
+              <input type="hidden" name="full_name" id="pc_full_name">
+              <input type="hidden" name="email" id="pc_email">
+              <input type="hidden" name="phone_number" id="pc_phone">
+              <input type="hidden" name="company_name" id="pc_company">
+              <input type="hidden" name="registration_type" id="pc_memberType">
+              <input type="hidden" name="title_role" id="pc_jobTitle">
+              <input type="hidden" name="mailing_address" id="pc_address">
+              <input type="hidden" name="city" id="pc_city">
+              <input type="hidden" name="state" id="pc_state">
+              <input type="hidden" name="zip_code" id="pc_zip">
+              <input type="hidden" name="country" id="pc_country">
+              <input type="hidden" name="preferred_payment_method" id="pc_payment_method">
+              <input type="hidden" name="selected_packages" id="pc_selected_packages">
+              <input type="hidden" name="total_amount" id="pc_total">
+              <input type="hidden" name="additional_notes" id="pc_notes">
+
+              <div class="form-wrap">
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="transactionRef">Transaction Reference / Last 4 Digits</label>
+                    <input id="transactionRef" name="transaction_reference" type="text" placeholder="Optional but recommended">
+                  </div>
+                  <div class="field">
+                    <label for="paymentDate">Date Funds Were Sent</label>
+                    <input id="paymentDate" name="payment_date_sent" type="date">
+                  </div>
+                  <div class="field full">
+                    <label for="paymentNote">Payment Note</label>
+                    <textarea id="paymentNote" name="payment_note" placeholder="Optional note about the payment"></textarea>
+                  </div>
+                </div>
+                <div class="checkbox-row">
+                  <input id="sentFundsCheck" type="checkbox">
+                  <label for="sentFundsCheck">I confirm that I have sent the funds using the selected official payment method.</label>
+                </div>
+              </div>
+
+              <div id="step5Status" class="status"></div>
+              <div class="actions">
+                <button type="button" class="btn btn-soft" onclick="showScreen(4)">Back</button>
+                <button type="button" class="btn btn-primary" onclick="submitConfirmation()">I’ve Sent Funds</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <iframe name="hidden_iframe_registration"></iframe>
+  <iframe name="hidden_iframe_tickets"></iframe>
+  <iframe name="hidden_iframe_confirmation"></iframe>
+
+  <script>
+    const LOGOS = {
+      "Cash App": {
+        url: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/cashapp.svg",
+        cls: "cashapp",
+        alt: "Cash App logo"
+      },
+      "Zelle": {
+        url: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/zelle.svg",
+        cls: "zelle",
+        alt: "Zelle logo"
+      },
+      "Apple Pay": {
+        url: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/applepay.svg",
+        cls: "applepay",
+        alt: "Apple Pay logo"
+      }
+    };
+
+    const PACKAGES = [{id:'class-sponsor',name:"Class Sponsor",price:50},{id:'division-sponsor',name:"Division Sponsor",price:100},{id:'overall-sponsor',name:"Overall Sponsor",price:150},{id:'member-recruit',name:"Member Recruit Level",price:200},{id:'wr-trails',name:"WR Trails Package",price:200},{id:'jetpack',name:"Jetpack Spotlight",price:250},{id:'4k-daytona',name:"4K Daytona Package",price:500},{id:'warp-speed',name:"Warp Speed Spotlight",price:500},{id:'sunrise-admiral',name:"Sunrise Admiral Package",price:750},{id:'full-throttle',name:"Full Throttle Spread",price:750},{id:'saltgrass',name:"Saltgrass Package",price:1000},{id:'jet-jockey',name:"Jet Jockey Package",price:1500},{id:'vendor-booth',name:"Vendor Booth 10x10",price:125}];
+    const cart = new Map();
+
+    function byId(id) { return document.getElementById(id); }
+    function fieldValue(id) { const el = byId(id); return el ? String(el.value || '').trim() : ''; }
+    function setFieldValue(id, value) { const el = byId(id); if (el) el.value = value || ''; }
+    function esc(value) {
+      return String(value || '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+    function money(num) {
+      return Number(num || 0).toLocaleString('en-US', { style:'currency', currency:'USD' });
+    }
+    function logoMarkup(method, sizeClass='') {
+      const item = LOGOS[method];
+      if (!item) return '';
+      const cls = sizeClass ? `brand-logo ${sizeClass} ${item.cls}` : `brand-logo ${item.cls}`;
+      return `<span class="${cls}"><img src="${item.url}" alt="${item.alt}"></span>`;
+    }
+
+    function showScreen(n) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      const screen = byId('screen-' + n);
+      if (screen) screen.classList.add('active');
+      const top = document.querySelector('.portal-card')?.getBoundingClientRect().top + window.pageYOffset - (document.querySelector('.site-header')?.offsetHeight || 0) - 10;
+      window.scrollTo({ top: Math.max(0, top || 0), behavior: 'smooth' });
+    }
+
+    const paymentSelect = byId('paymentSelect');
+    const paymentMethodTrigger = byId('paymentMethodTrigger');
+    const paymentMethodMenu = byId('paymentMethodMenu');
+    const paymentMethodInput = byId('paymentMethod');
+    const paymentTriggerContent = byId('paymentTriggerContent');
+
+    function setPaymentMethod(value) {
+      paymentMethodInput.value = value;
+      paymentTriggerContent.innerHTML = value
+        ? `${logoMarkup(value)}<span class="payment-trigger-value">${esc(value)}</span>`
+        : `<span class="payment-trigger-placeholder">Select payment method</span>`;
+      document.querySelectorAll('.payment-option').forEach(btn => btn.classList.toggle('active', btn.dataset.value === value));
+      updatePaymentMethodPanels();
+    }
+
+    function updatePaymentMethodPanels() {
+      const method = fieldValue('paymentMethod');
+      ['cashAppBox', 'zelleBox', 'applePayBox'].forEach(id => byId(id)?.classList.remove('active'));
+      if (method === 'Cash App') byId('cashAppBox')?.classList.add('active');
+      if (method === 'Zelle') byId('zelleBox')?.classList.add('active');
+      if (method === 'Apple Pay') byId('applePayBox')?.classList.add('active');
+
+      const vis = byId('selectedMethodVisual');
+      const logo = byId('selectedMethodLogo');
+      const name = byId('selectedMethodName');
+      if (method) {
+        logo.innerHTML = logoMarkup(method, 'brand-lg');
+        name.textContent = method;
+        vis.classList.add('active');
+      } else {
+        logo.innerHTML = '';
+        name.textContent = '—';
+        vis.classList.remove('active');
+      }
+    }
+
+    paymentMethodTrigger?.addEventListener('click', () => {
+      paymentMethodMenu?.classList.toggle('open');
+      paymentMethodTrigger.classList.toggle('open', paymentMethodMenu?.classList.contains('open'));
+    });
+    document.querySelectorAll('.payment-option').forEach(btn => {
+      btn.addEventListener('click', () => {
+        setPaymentMethod(btn.dataset.value);
+        paymentMethodMenu?.classList.remove('open');
+        paymentMethodTrigger?.classList.remove('open');
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if (paymentSelect && !paymentSelect.contains(e.target)) {
+        paymentMethodMenu?.classList.remove('open');
+        paymentMethodTrigger?.classList.remove('open');
+      }
+    });
+
+    function packageSummaryText() {
+      return [...cart.values()].map(i => `${i.name} x ${i.qty} @ ${money(i.price)} = ${money(i.price * i.qty)}`).join(' | ');
+    }
+    function cartTotal() {
+      return [...cart.values()].reduce((sum, item) => sum + (item.price * item.qty), 0);
+    }
+
+    function renderCart() {
+      const total = cartTotal();
+      byId('cartTotal').textContent = money(total);
+      const body = byId('cartBody');
+      if (!cart.size) {
+        body.innerHTML = '<p class="cart-empty">No package has been added yet.</p>';
+        return;
+      }
+      body.innerHTML = [...cart.values()].map(item => `
+        <div class="cart-row">
+          <div>
+            <div class="cart-row-name">${esc(item.name)}</div>
+            <div class="cart-row-meta">${money(item.price)} each</div>
+          </div>
+          <div class="cart-row-qty">Qty ${item.qty}</div>
+          <div class="cart-row-price">${money(item.price * item.qty)}</div>
+          <button type="button" class="remove-btn" onclick="removePackage('${item.id}')">×</button>
+        </div>
+      `).join('');
+    }
+
+    function addPackage(id) {
+      const item = PACKAGES.find(x => x.id === id);
+      if (!item) return;
+      const qty = Math.max(1, parseInt(byId('qty-' + id)?.value || '1', 10));
+      const existing = cart.get(id);
+      const currentQty = existing ? existing.qty : 0;
+      cart.set(id, { ...item, qty: currentQty + qty });
+      renderCart();
+    }
+
+    function removePackage(id) {
+      cart.delete(id);
+      renderCart();
+    }
+
+    function fillRegistrationHidden(prefix) {
+      setFieldValue(prefix + '_full_name', fieldValue('fullName'));
+      setFieldValue(prefix + '_email', fieldValue('email'));
+      setFieldValue(prefix + '_phone', fieldValue('phone'));
+      setFieldValue(prefix + '_company', fieldValue('companyName'));
+      setFieldValue(prefix + '_memberType', fieldValue('memberType'));
+      setFieldValue(prefix + '_jobTitle', fieldValue('jobTitle'));
+      setFieldValue(prefix + '_address', fieldValue('address'));
+      setFieldValue(prefix + '_city', fieldValue('city'));
+      setFieldValue(prefix + '_state', fieldValue('state'));
+      setFieldValue(prefix + '_zip', fieldValue('zip'));
+      setFieldValue(prefix + '_country', fieldValue('country'));
+      setFieldValue(prefix + '_payment_method', fieldValue('paymentMethod'));
+      setFieldValue(prefix + '_selected_packages', packageSummaryText());
+      setFieldValue(prefix + '_total', money(cartTotal()));
+      setFieldValue(prefix + '_notes', fieldValue('notes'));
+    }
+
+    function updateSummary(id) {
+      const d = {
+        fullName: fieldValue('fullName'),
+        email: fieldValue('email'),
+        phone: fieldValue('phone'),
+        companyName: fieldValue('companyName'),
+        memberType: fieldValue('memberType'),
+        jobTitle: fieldValue('jobTitle'),
+        address: fieldValue('address'),
+        city: fieldValue('city'),
+        state: fieldValue('state'),
+        zip: fieldValue('zip'),
+        country: fieldValue('country'),
+        paymentMethod: fieldValue('paymentMethod'),
+      };
+      const target = byId(id);
+      if (!target) return;
+      target.innerHTML = `
+        <div class="summary-row"><div class="summary-label">Event</div><div class="summary-value">TLBAA World Expo 2026</div></div>
+        <div class="summary-row"><div class="summary-label">Date</div><div class="summary-value">July 15–19, 2026</div></div>
+        <div class="summary-row"><div class="summary-label">Venue</div><div class="summary-value">Taylor County Expo Center, 1700 TX-36, Abilene, TX 79602</div></div>
+        <div class="summary-row"><div class="summary-label">Participant</div><div class="summary-value">${esc(d.fullName)}</div></div>
+        <div class="summary-row"><div class="summary-label">Email</div><div class="summary-value">${esc(d.email)}</div></div>
+        <div class="summary-row"><div class="summary-label">Phone</div><div class="summary-value">${esc(d.phone)}</div></div>
+        <div class="summary-row"><div class="summary-label">Company</div><div class="summary-value">${esc(d.companyName)}</div></div>
+        <div class="summary-row"><div class="summary-label">Registration Type</div><div class="summary-value">${esc(d.memberType)}</div></div>
+        <div class="summary-row"><div class="summary-label">Selected Packages</div><div class="summary-value">${esc(packageSummaryText() || 'No packages selected')}</div></div>
+        <div class="summary-row"><div class="summary-label">Total</div><div class="summary-value"><strong>${money(cartTotal())}</strong></div></div>
+        <div class="summary-row"><div class="summary-label">Payment Method</div><div class="summary-value">${d.paymentMethod ? logoMarkup(d.paymentMethod) + ' <span style="display:inline-block;vertical-align:middle;margin-left:8px">' + esc(d.paymentMethod) + '</span>' : '—'}</div></div>
+      `;
+    }
+
+    function submitRegistration() {
+      const form = byId('registrationForm');
+      if (!fieldValue('paymentMethod')) {
+        setStatus('step2Status', 'error', 'Please select a payment method.');
+        return;
+      }
+      if (!form.reportValidity()) return;
+
+      setStatus('step2Status', 'success', 'Submitting registration details...');
+      fillRegistrationHidden(''); // no hidden form; uses form values directly
+      try { form.submit(); } catch (e) { console.warn('Registration submit failed:', e); }
+      setTimeout(() => {
+        updatePaymentMethodPanels();
+        renderCart();
+        setStatus('step2Status', 'success', 'Registration details submitted successfully.');
+        showScreen(3);
+      }, 500);
+    }
+
+    function submitTickets() {
+      if (!cart.size) {
+        setStatus('step3Status', 'error', 'Please add at least one package before continuing.');
+        return;
+      }
+      fillRegistrationHidden('tk');
+      const f = byId('ticketsForm');
+      setStatus('step3Status', 'success', 'Submitting package details...');
+      try { f.submit(); } catch (e) { console.warn('Package submit failed:', e); }
+      updateSummary('paymentSummary');
+      setTimeout(() => {
+        setStatus('step3Status', 'success', 'Package details submitted successfully.');
+        showScreen(4);
+      }, 500);
+    }
+
+    function goToConfirmation() {
+      fillRegistrationHidden('pc');
+      updateSummary('finalSummary');
+      showScreen(5);
+    }
+
+    function submitConfirmation() {
+      if (!byId('sentFundsCheck').checked) {
+        setStatus('step5Status', 'error', 'Please confirm that you have sent the funds before continuing.');
+        return;
+      }
+      fillRegistrationHidden('pc');
+      const f = byId('paymentConfirmForm');
+      setStatus('step5Status', 'success', 'Submitting payment confirmation...');
+      try { f.submit(); } catch (e) { console.warn('Confirmation submit failed:', e); }
+      setTimeout(() => {
+        setStatus('step5Status', 'success', 'Payment confirmation submitted successfully.');
+      }, 500);
+    }
+
+    function setStatus(id, type, message) {
+      const el = byId(id);
+      if (!el) return;
+      el.className = 'status ' + type;
+      el.textContent = message;
+    }
+
+    // Initial state
+    setPaymentMethod('');
+    renderCart();
+    updatePaymentMethodPanels();
+    updateSummary('paymentSummary');
+  </script>
+</body>
+</html>
